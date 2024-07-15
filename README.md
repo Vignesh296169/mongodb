@@ -75,4 +75,15 @@ use $in method  within find () method find ({name:"vicky"}) or find({name:{$eq:"
   - no need to give whole values only need to give certain value and field that need to upadate and replaceOne() is opposite you have to give the whole update docs,
   - here important one filter option does not ans conditions so we can use the upsert method that put that doc in collection
   - findAndModify() this will update and return the doc just has been updated
-  - update many() is pending
+  - update many() syntx=>(filter document,update document,option)
+  - db.collection.updateMany(
+  <filter>,
+  <update>,
+  <options>)
+  - $set: Sets the value of a field in a document.
+    $unset: Removes the specified field from a document.
+    $inc: Increments the value of a field by a specified amount.This operator is particularly useful in scenarios where you need to adjust numeric values without overwriting them
+    Likes or Votes: Adjust the number of likes or votes for a post, comment, or product.
+    $currentDate: Sets the value of a field to the current date.
+* delete one and delete many  deleteOne({}) and deleteMany()
+* sorting is pending
