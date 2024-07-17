@@ -86,4 +86,15 @@ use $in method  within find () method find ({name:"vicky"}) or find({name:{$eq:"
     Likes or Votes: Adjust the number of likes or votes for a post, comment, or product.
     $currentDate: Sets the value of a field to the current date.
 * delete one and delete many  deleteOne({}) and deleteMany()
-* sorting is pending
+* sorting is  we can re order out quired docs 
+  - Cursor() If you have a lot of data (like a lot of toys), it can be hard to look at all of them at once. The cursor makes it easy to go through the data bit by bit.
+  - db.toys.find().sort({ price: 1 })-single
+  - db.toys.find().sort({ category: 1, price: -1 })-multi
+  - Projection() Projection helps in optimizing the performance by fetching only the required fields and reducing the amount of data transferred over the network.
+  - db.collection.find(query, projection) db.users.find({}, { name: 1, age: 1, email: 1, address: 1, phone: 1, _id: 0 })
+  - the limit() method is used to specify the maximum number of documents to return in a query result.
+  - db.collection.countDocuments(query, options) The countDocuments() method in MongoDB provides a flexible way to count documents based on specified criteria or across entire collections.
+ * mongodb aggrigation
+  - Aggregation pipelines in MongoDB are powerful tools for analyzing and summarizing data. Think of an aggregation pipeline as a series of stages through which documents pass, with each stage performing a specific operation on the data.
+  - its complete once at a Time db.collection.aggregate( [ { <stage1> }, { <stage2> }, ... ] ),, one stage out put is a input for the another stage
+  - 
