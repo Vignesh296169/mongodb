@@ -97,4 +97,5 @@ use $in method  within find () method find ({name:"vicky"}) or find({name:{$eq:"
  * mongodb aggrigation
   - Aggregation pipelines in MongoDB are powerful tools for analyzing and summarizing data. Think of an aggregation pipeline as a series of stages through which documents pass, with each stage performing a specific operation on the data.
   - its complete once at a Time db.collection.aggregate( [ { <stage1> }, { <stage2> }, ... ] ),, one stage out put is a input for the another stage
-  - 
+  - there different types of stages like $match,group,limit,sort
+  - group is usefull when group based on group key and sum or more mathematic operations
