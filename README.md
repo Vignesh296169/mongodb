@@ -99,3 +99,5 @@ use $in method  within find () method find ({name:"vicky"}) or find({name:{$eq:"
   - its complete once at a Time db.collection.aggregate( [ { <stage1> }, { <stage2> }, ... ] ),, one stage out put is a input for the another stage
   - there different types of stages like $match,group,limit,sort
   - group is usefull when group based on group key and sum or more mathematic operations
+  - $unwind The $unwind stage in MongoDB's aggregation framework is used to deconstruct an array field from the input documents, resulting in a separate output document for each element in the array. This can be useful for flattening nested arrays and performing operations on individual elements.
+  -$group, If you set _id to null, it means that all documents will be grouped into a single group. This is often used for calculating aggregate values across the entire collection, such as total counts, sums, averages, etc., without any specific grouping criteria.
