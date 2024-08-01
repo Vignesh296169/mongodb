@@ -101,3 +101,11 @@ use $in method  within find () method find ({name:"vicky"}) or find({name:{$eq:"
   - group is usefull when group based on group key and sum or more mathematic operations
   - $unwind The $unwind stage in MongoDB's aggregation framework is used to deconstruct an array field from the input documents, resulting in a separate output document for each element in the array. This can be useful for flattening nested arrays and performing operations on individual elements.
   -$group, If you set _id to null, it means that all documents will be grouped into a single group. This is often used for calculating aggregate values across the entire collection, such as total counts, sums, averages, etc., without any specific grouping criteria.
+* Data View in mongo db
+   - The createView command in MongoDB is used to create a view, which is a virtual collection based on the result of an aggregation pipeline on other collections. Views do not store data themselves but present data from other collections based on a specified query.
+   - {
+  create: "viewName",
+  viewOn: "sourceCollection",
+  pipeline: [ aggregationPipeline ]
+}
+
