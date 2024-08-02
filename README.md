@@ -119,3 +119,5 @@ use $in method  within find () method find ({name:"vicky"}) or find({name:{$eq:"
 -$out Stage
 Purpose: The $out stage is used to write the results of an aggregation pipeline to a new collection. This can be useful for creating new collections based on aggregated data, archiving results, or materializing views.
 - in out stage we can also use the defined db.. which db that can use and create the collection from the stage pipeline return
+- a. The existing collection is erased and replaced with the outputted documents.
+* mongdo db indexes
