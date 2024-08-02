@@ -108,4 +108,11 @@ use $in method  within find () method find ({name:"vicky"}) or find({name:{$eq:"
   viewOn: "sourceCollection",
   pipeline: [ aggregationPipeline ]
 }
-
+* $project,set,count
+  - $project Purpose: Used to include, exclude, or add fields in documents as they pass through the aggregation pipeline.
+  - $set Purpose: Adds new fields to documents or updates existing fields with new values.
+  - $count Purpose: Counts the number of documents that pass through the pipeline and outputs the count.
+  - [
+  { $match: { status: "active" } },
+  { $count: "activeCount" }
+]
