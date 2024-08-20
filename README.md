@@ -120,4 +120,8 @@ use $in method  within find () method find ({name:"vicky"}) or find({name:{$eq:"
 Purpose: The $out stage is used to write the results of an aggregation pipeline to a new collection. This can be useful for creating new collections based on aggregated data, archiving results, or materializing views.
 - in out stage we can also use the defined db.. which db that can use and create the collection from the stage pipeline return
 - a. The existing collection is erased and replaced with the outputted documents.
+*cascting delete
+To achieve automatic deletion of a related document in another collection when a document is deleted in MongoDB, you can implement this using cascading deletes in your application code. MongoDB does not natively support cascading deletes like some relational databases, so this must be managed manually or through a trigger-like mechanism.
 * mongdo db indexes
+
+
